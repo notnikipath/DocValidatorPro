@@ -1,0 +1,35 @@
+name: DocValidator Pro CD
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build-images:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        service:
+          - api-gateway
+          - data-ingestion-service
+          - validation-service
+          - comparison-service
+          - analytics-service
+          - quality-service
+          - export-service
+          - storage-service
+          - notification-service
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Build image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ./${{ matrix.service }}/Dockerfile
+          push: false
+          tags: docvalidator/${{ matrix.service }}:latest

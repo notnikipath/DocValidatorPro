@@ -1,0 +1,224 @@
+﻿services:
+  api-gateway:
+    build:
+      context: .
+      dockerfile: api-gateway/Dockerfile
+    container_name: docvalidator-api-gateway
+    env_file: .env
+    ports:
+      - "32114:8500"
+    depends_on:
+      - data-ingestion-service
+      - validation-service
+      - comparison-service
+      - analytics-service
+      - quality-service
+      - export-service
+      - storage-service
+      - notification-service
+    networks: [docvalidator-net]
+
+  data-ingestion-service:
+    build:
+      context: .
+      dockerfile: data-ingestion-service/Dockerfile
+    container_name: docvalidator-ingestion
+    env_file: .env
+    ports:
+      - "32115:8501"
+    depends_on:
+      - storage-service
+      - rabbitmq
+      - redpanda
+    networks: [docvalidator-net]
+
+  validation-service:
+    build:
+      context: .
+      dockerfile: validation-service/Dockerfile
+    container_name: docvalidator-validation
+    env_file: .env
+    ports:
+      - "32116:8502"
+    depends_on:
+      - storage-service
+      - postgres
+    networks: [docvalidator-net]
+
+  comparison-service:
+    build:
+      context: .
+      dockerfile: comparison-service/Dockerfile
+    container_name: docvalidator-comparison
+    env_file: .env
+    ports:
+      - "32117:8503"
+    depends_on:
+      - storage-service
+      - redis
+    networks: [docvalidator-net]
+
+  analytics-service:
+    build:
+      context: .
+      dockerfile: analytics-service/Dockerfile
+    container_name: docvalidator-analytics
+    env_file: .env
+    ports:
+      - "32118:8504"
+    depends_on:
+      - clickhouse
+      - postgres
+    networks: [docvalidator-net]
+
+  quality-service:
+    build:
+      context: .
+      dockerfile: quality-service/Dockerfile
+    container_name: docvalidator-quality
+    env_file: .env
+    ports:
+      - "32119:8505"
+    depends_on:
+      - storage-service
+    networks: [docvalidator-net]
+
+  export-service:
+    build:
+      context: .
+      dockerfile: export-service/Dockerfile
+    container_name: docvalidator-export
+    env_file: .env
+    ports:
+      - "32120:8506"
+    depends_on:
+      - storage-service
+      - minio
+    networks: [docvalidator-net]
+
+  storage-service:
+    build:
+      context: .
+      dockerfile: storage-service/Dockerfile
+    container_name: docvalidator-storage
+    env_file: .env
+    ports:
+      - "32121:8507"
+    depends_on:
+      - postgres
+      - minio
+      - redis
+    networks: [docvalidator-net]
+
+  notification-service:
+    build:
+      context: .
+      dockerfile: notification-service/Dockerfile
+    container_name: docvalidator-notification
+    env_file: .env
+    ports:
+      - "32122:8508"
+    depends_on:
+      - redis
+    networks: [docvalidator-net]
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    container_name: docvalidator-frontend
+    env_file: .env
+    ports:
+      - "32123:5177"
+    depends_on:
+      - api-gateway
+    networks: [docvalidator-net]
+
+  postgres:
+    image: postgres:16
+    container_name: docvalidator-postgres
+    environment:
+      POSTGRES_DB: docvalidator
+      POSTGRES_USER: docvalidator
+      POSTGRES_PASSWORD: docvalidator
+    ports:
+      - "32124:5432"
+    volumes:
+      - docvalidator_postgres_data:/var/lib/postgresql/data
+    networks: [docvalidator-net]
+
+  clickhouse:
+    image: clickhouse/clickhouse-server:24.8
+    container_name: docvalidator-clickhouse
+    environment:
+      CLICKHOUSE_DB: docvalidator
+      CLICKHOUSE_USER: default
+      CLICKHOUSE_PASSWORD: ""
+    ports:
+      - "18123:8123"
+      - "19000:9000"
+    volumes:
+      - docvalidator_clickhouse_data:/var/lib/clickhouse
+    networks: [docvalidator-net]
+
+  minio:
+    image: minio/minio:latest
+    container_name: docvalidator-minio
+    environment:
+      MINIO_ROOT_USER: docvalidator
+      MINIO_ROOT_PASSWORD: docvalidator123
+    command: server /data --console-address ":9001"
+    ports:
+      - "32125:9000"
+      - "32126:9001"
+    volumes:
+      - docvalidator_minio_data:/data
+    networks: [docvalidator-net]
+
+  redis:
+    image: redis:7
+    container_name: docvalidator-redis
+    ports:
+      - "32127:6379"
+    networks: [docvalidator-net]
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: docvalidator-rabbitmq
+    ports:
+      - "32128:5672"
+      - "32129:15672"
+    networks: [docvalidator-net]
+
+  redpanda:
+    image: redpandadata/redpanda:v24.3.5
+    container_name: docvalidator-redpanda
+    command:
+      - redpanda
+      - start
+      - --overprovisioned
+      - --smp
+      - "1"
+      - --memory
+      - "512M"
+      - --reserve-memory
+      - "0M"
+      - --node-id
+      - "0"
+      - --check=false
+      - --kafka-addr
+      - PLAINTEXT://0.0.0.0:9092
+      - --advertise-kafka-addr
+      - PLAINTEXT://redpanda:9092
+    ports:
+      - "32130:9092"
+    networks: [docvalidator-net]
+
+networks:
+  docvalidator-net:
+    driver: bridge
+
+volumes:
+  docvalidator_postgres_data:
+  docvalidator_clickhouse_data:
+  docvalidator_minio_data:

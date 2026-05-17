@@ -1,0 +1,4485 @@
+{
+  "generated_at": "2026-05-13T21:40:41.565802+00:00",
+  "count": 120,
+  "items": [
+    {
+      "sample_id": "3c3176c4-e2cd-4bc1-9c50-bb94ba9499c7",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "financial",
+      "source": "manual",
+      "language": "ru",
+      "payload": {
+        "document_number": "INV-5506",
+        "issue_date": "2026-04-12",
+        "due_date": "2026-05-06",
+        "counterparty_name": "ООО Бета",
+        "counterparty_inn": "771596418012",
+        "subtotal": 2713.02,
+        "tax_amount": 542.6,
+        "total_amount": 3255.62,
+        "currency": "RUB",
+        "phone": "+79991234567"
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          3952,
+          8140,
+          16328,
+          17247,
+          3739,
+          15031,
+          29493,
+          16446,
+          31439,
+          20231
+        ],
+        "counterparty_risk": 0.62,
+        "delay_days": 0,
+        "historical_failures": 1,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "d5db9654-ce63-4f82-ac8e-ffd6a8189418",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "legal",
+      "source": "manual",
+      "language": "en",
+      "payload": {
+        "contract_number": "CTR-320",
+        "start_date": "2025-10-30",
+        "end_date": "2026-04-22",
+        "party_a": "ООО Альфа",
+        "party_b": "ООО Альфа",
+        "contract_subject": "Тест",
+        "counterparty_inn": "1234567890"
+      },
+      "expected_errors": [
+        "weak_subject",
+        "identical_parties",
+        "invalid_inn"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          19335,
+          4847,
+          32108,
+          10180,
+          26807,
+          7164,
+          21213,
+          25700,
+          14601,
+          6558
+        ],
+        "counterparty_risk": 0.08,
+        "delay_days": 14,
+        "historical_failures": 2,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "df80a452-837f-4875-9ae9-538fe55da796",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "hr",
+      "source": "manual",
+      "language": "ru",
+      "payload": {
+        "full_name": "Иванов Иван",
+        "position": "QA Engineer",
+        "experience_years": 8,
+        "phone": "12345",
+        "email": "bad-email",
+        "date": "2026-02-19"
+      },
+      "expected_errors": [
+        "invalid_phone",
+        "invalid_email_like"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          19496,
+          6679,
+          13215,
+          18043,
+          12708,
+          32294,
+          26867,
+          19691,
+          16392,
+          23252
+        ],
+        "counterparty_risk": 0.64,
+        "delay_days": 3,
+        "historical_failures": 1,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "fd9ed690-562a-4e38-bdab-f3cb2f41727c",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "medical",
+      "source": "ocr_api",
+      "language": "en",
+      "payload": {
+        "patient_id": "PT-7572",
+        "date": "2026-04-26",
+        "diagnosis": "ОРВИ",
+        "conclusion": "Амбулаторное наблюдение",
+        "doctor": "Иванова О.В."
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          27928,
+          32071,
+          11363,
+          19359,
+          11150,
+          18162,
+          19219,
+          30077,
+          28175,
+          25723
+        ],
+        "counterparty_risk": 0.2,
+        "delay_days": 8,
+        "historical_failures": 4,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "af0a8766-9b33-43b4-becd-263e4be86939",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "technical",
+      "source": "manual",
+      "language": "ru",
+      "payload": {
+        "spec_id": "SPEC-148",
+        "version": "1.0.0",
+        "release_date": "99.99.2026",
+        "component": "gateway",
+        "status": "approved"
+      },
+      "expected_errors": [
+        "invalid_date"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          27216,
+          27009,
+          32674,
+          18476,
+          2752,
+          9507,
+          19486,
+          24293,
+          9310,
+          21234
+        ],
+        "counterparty_risk": 0.35,
+        "delay_days": 29,
+        "historical_failures": 0,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "fc23d8fc-811f-4404-867f-058bc5f2897a",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "financial",
+      "source": "manual",
+      "language": "ru",
+      "payload": {
+        "document_number": "INV-9317",
+        "issue_date": "2026-01-17",
+        "due_date": "2026-05-10",
+        "counterparty_name": "АО Гамма",
+        "counterparty_inn": "771596418012",
+        "subtotal": 38455.17,
+        "tax_amount": 7691.03,
+        "total_amount": 46146.2,
+        "currency": "РУБ",
+        "phone": "+79991234567"
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          2037,
+          23243,
+          34021,
+          3276,
+          9331,
+          25788,
+          22153,
+          17692,
+          5796,
+          17785
+        ],
+        "counterparty_risk": 0.66,
+        "delay_days": 5,
+        "historical_failures": 0,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "21db745d-23ba-4f28-8232-de00238cdff2",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "legal",
+      "source": "ocr_api",
+      "language": "en",
+      "payload": {
+        "contract_number": "CTR-884",
+        "start_date": "2026-04-11",
+        "end_date": "2026-05-05",
+        "party_a": "АО Сфера",
+        "party_b": "Sigma Corp",
+        "contract_subject": "Сопровождение проекта",
+        "counterparty_inn": "7707083893"
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          15880,
+          15182,
+          22428,
+          28148,
+          26472,
+          30711,
+          31588,
+          9930,
+          18246,
+          16725
+        ],
+        "counterparty_risk": 0.09,
+        "delay_days": 1,
+        "historical_failures": 4,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "13509324-db27-4050-9635-c20219bc0215",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "hr",
+      "source": "json",
+      "language": "ru",
+      "payload": {
+        "full_name": "Иванов Иван",
+        "position": "Analyst",
+        "experience_years": 1,
+        "phone": "+15551234567",
+        "email": "candidate@mail.com",
+        "date": "2026-04-27"
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          20250,
+          33812,
+          16040,
+          10671,
+          32976,
+          17925,
+          32996,
+          28677,
+          14478,
+          8181
+        ],
+        "counterparty_risk": 0.12,
+        "delay_days": 27,
+        "historical_failures": 2,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "2a6cc592-2cac-4e39-b0f8-a7bfcecbfc16",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "medical",
+      "source": "ocr_api",
+      "language": "en",
+      "payload": {
+        "patient_id": "PT-1887",
+        "date": "2026-03-31",
+        "diagnosis": "Стресс",
+        "conclusion": "",
+        "doctor": "Dr. Adams"
+      },
+      "expected_errors": [
+        "missing_conclusion"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          9161,
+          18295,
+          14556,
+          14465,
+          31400,
+          11186,
+          29648,
+          14025,
+          20254,
+          32318
+        ],
+        "counterparty_risk": 0.22,
+        "delay_days": 4,
+        "historical_failures": 3,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "c54b3667-08d7-4591-80ca-6b5b2e331384",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "technical",
+      "source": "manual",
+      "language": "en",
+      "payload": {
+        "spec_id": "SPEC-653",
+        "version": "1.0.0",
+        "release_date": "99.99.2026",
+        "component": "pump",
+        "status": "approved"
+      },
+      "expected_errors": [
+        "invalid_date"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          16008,
+          28282,
+          5842,
+          12789,
+          26836,
+          2141,
+          27586,
+          19380,
+          31819,
+          20694
+        ],
+        "counterparty_risk": 0.35,
+        "delay_days": 35,
+        "historical_failures": 3,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "4ed9fcf7-3368-411d-ad19-7d9c0bdec718",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "financial",
+      "source": "ocr_api",
+      "language": "ru",
+      "payload": {
+        "document_number": "INV-9883",
+        "issue_date": "2026-05-06",
+        "due_date": "2026-04-20",
+        "counterparty_name": "АО Гамма",
+        "counterparty_inn": "7707083893",
+        "subtotal": 12058.49,
+        "tax_amount": 2411.7,
+        "total_amount": 14486.59,
+        "currency": "RUB",
+        "phone": "8(999)-123-45-67"
+      },
+      "expected_errors": [
+        "arithmetic_mismatch",
+        "phone_needs_normalization"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          5727,
+          7250,
+          14178,
+          6490,
+          6453,
+          17414,
+          28461,
+          9856,
+          18135,
+          4604
+        ],
+        "counterparty_risk": 0.48,
+        "delay_days": 26,
+        "historical_failures": 4,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "ca132b72-94a2-4ac5-8181-a90e083f4d56",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "legal",
+      "source": "ocr_api",
+      "language": "en",
+      "payload": {
+        "contract_number": "CTR-785",
+        "start_date": "2025-11-11",
+        "end_date": "2026-04-23",
+        "party_a": "ООО Альфа",
+        "party_b": "ООО Бета",
+        "contract_subject": "Поставка оборудования",
+        "counterparty_inn": "1234567890"
+      },
+      "expected_errors": [
+        "invalid_inn"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          31964,
+          22720,
+          6754,
+          2610,
+          32034,
+          8552,
+          6801,
+          15969,
+          19380,
+          10680
+        ],
+        "counterparty_risk": 0.7,
+        "delay_days": 4,
+        "historical_failures": 1,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "b08df663-329b-45a4-be02-8564fa06eea9",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "hr",
+      "source": "json",
+      "language": "en",
+      "payload": {
+        "full_name": "",
+        "position": "HR Manager",
+        "experience_years": 9,
+        "phone": "+15551234567",
+        "email": "bad-email",
+        "date": "2025-06-08"
+      },
+      "expected_errors": [
+        "invalid_email_like",
+        "missing_full_name"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          9564,
+          9014,
+          12187,
+          19848,
+          20465,
+          15803,
+          24471,
+          15342,
+          19300,
+          34016
+        ],
+        "counterparty_risk": 0.23,
+        "delay_days": 3,
+        "historical_failures": 0,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "1319e5f1-5e08-459c-9fb1-fcfe92d58878",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "medical",
+      "source": "ocr_api",
+      "language": "en",
+      "payload": {
+        "patient_id": "PT-1722",
+        "date": "2026-05-13",
+        "diagnosis": "Гипертония",
+        "conclusion": "Амбулаторное наблюдение",
+        "doctor": "Иванова О.В."
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          30028,
+          2633,
+          9331,
+          6931,
+          11768,
+          4361,
+          26196,
+          11705,
+          30166,
+          10352
+        ],
+        "counterparty_risk": 0.08,
+        "delay_days": 23,
+        "historical_failures": 0,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "d221d241-b2b5-452b-9ced-9a8dc21f31e8",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "technical",
+      "source": "ocr_api",
+      "language": "ru",
+      "payload": {
+        "spec_id": "SPEC-355",
+        "version": "draft",
+        "release_date": "99.99.2026",
+        "component": "controller",
+        "status": "draft"
+      },
+      "expected_errors": [
+        "non_numeric_version",
+        "invalid_date"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          17514,
+          12649,
+          13603,
+          29020,
+          3624,
+          13754,
+          23770,
+          28982,
+          18263,
+          19485
+        ],
+        "counterparty_risk": 0.16,
+        "delay_days": 44,
+        "historical_failures": 0,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "33a4cf23-5edc-4ea4-961a-7c8a3ae6e8a1",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "financial",
+      "source": "json",
+      "language": "ru",
+      "payload": {
+        "document_number": "INV-4644",
+        "issue_date": "2026-04-18",
+        "due_date": "2026-04-17",
+        "counterparty_name": "Delta Ltd",
+        "counterparty_inn": "7707083890",
+        "subtotal": 43141.77,
+        "tax_amount": 8628.35,
+        "total_amount": 51770.12,
+        "currency": "USD",
+        "phone": "+79991234567"
+      },
+      "expected_errors": [
+        "invalid_inn"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          28113,
+          23512,
+          20258,
+          6549,
+          20292,
+          25012,
+          28193,
+          23702,
+          3808,
+          9559
+        ],
+        "counterparty_risk": 0.66,
+        "delay_days": 16,
+        "historical_failures": 1,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "dde2b494-0886-4c59-b871-e8a67f85f7b7",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "legal",
+      "source": "ocr_api",
+      "language": "ru",
+      "payload": {
+        "contract_number": "CTR-544",
+        "start_date": "2026-02-14",
+        "end_date": "2026-04-23",
+        "party_a": "АО Сфера",
+        "party_b": "Sigma Corp",
+        "contract_subject": "Тест",
+        "counterparty_inn": "7707083893"
+      },
+      "expected_errors": [
+        "weak_subject"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          18693,
+          4908,
+          30577,
+          2110,
+          14912,
+          25869,
+          30265,
+          6585,
+          23639,
+          22572
+        ],
+        "counterparty_risk": 0.51,
+        "delay_days": 7,
+        "historical_failures": 2,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "2bc51f2b-366f-45ff-80b2-a1f58410b04b",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "hr",
+      "source": "manual",
+      "language": "ru",
+      "payload": {
+        "full_name": "John Smith",
+        "position": "QA Engineer",
+        "experience_years": 9,
+        "phone": "+15551234567",
+        "email": "candidate@mail.com",
+        "date": "2025-10-10"
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          21723,
+          28612,
+          2026,
+          21914,
+          20803,
+          15774,
+          30173,
+          23118,
+          32473,
+          30952
+        ],
+        "counterparty_risk": 0.36,
+        "delay_days": 13,
+        "historical_failures": 4,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "bee83ded-e0f8-4f30-b34c-2b1a96b31085",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "medical",
+      "source": "json",
+      "language": "en",
+      "payload": {
+        "patient_id": "PT-3780",
+        "date": "2026-04-01",
+        "diagnosis": "ОРВИ",
+        "conclusion": "Рекомендована госпитализация",
+        "doctor": "Иванова О.В."
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          16722,
+          15050,
+          11656,
+          3600,
+          5028,
+          18046,
+          33138,
+          6772,
+          31846,
+          29160
+        ],
+        "counterparty_risk": 0.67,
+        "delay_days": 36,
+        "historical_failures": 1,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "83b514d6-c457-4310-a407-f3a7bfc47931",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "technical",
+      "source": "manual",
+      "language": "ru",
+      "payload": {
+        "spec_id": "SPEC-349",
+        "version": "1.0.0",
+        "release_date": "99.99.2026",
+        "component": "gateway",
+        "status": "approved"
+      },
+      "expected_errors": [
+        "invalid_date"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          13526,
+          32444,
+          5291,
+          18331,
+          9953,
+          31914,
+          10738,
+          32450,
+          22794,
+          31004
+        ],
+        "counterparty_risk": 0.48,
+        "delay_days": 32,
+        "historical_failures": 3,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "fd9b8892-3b5b-4971-b2b4-49a0162ec548",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "financial",
+      "source": "json",
+      "language": "en",
+      "payload": {
+        "document_number": "INV-8777",
+        "issue_date": "2026-03-17",
+        "due_date": "2026-05-05",
+        "counterparty_name": "ООО Бета",
+        "counterparty_inn": "771596418012",
+        "subtotal": 37567.29,
+        "tax_amount": 7513.46,
+        "total_amount": 45080.75,
+        "currency": "USD",
+        "phone": "8(999)-123-45-67"
+      },
+      "expected_errors": [
+        "phone_needs_normalization"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          30827,
+          7077,
+          20725,
+          17367,
+          19807,
+          24010,
+          22952,
+          7280,
+          11068,
+          11884
+        ],
+        "counterparty_risk": 0.21,
+        "delay_days": 44,
+        "historical_failures": 1,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "b900259d-c314-42d6-8f31-77f06eb458bd",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "legal",
+      "source": "manual",
+      "language": "ru",
+      "payload": {
+        "contract_number": "CTR-438",
+        "start_date": "2025-12-26",
+        "end_date": "2026-04-14",
+        "party_a": "АО Сфера",
+        "party_b": "ООО Альфа",
+        "contract_subject": "Тест",
+        "counterparty_inn": "7707083893"
+      },
+      "expected_errors": [
+        "weak_subject"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          26928,
+          33259,
+          2386,
+          25052,
+          21569,
+          27558,
+          29460,
+          16453,
+          33996,
+          16380
+        ],
+        "counterparty_risk": 0.24,
+        "delay_days": 31,
+        "historical_failures": 0,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "46c1683d-6b64-4492-b64d-7182c4372a18",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "hr",
+      "source": "json",
+      "language": "en",
+      "payload": {
+        "full_name": "",
+        "position": "QA Engineer",
+        "experience_years": 5,
+        "phone": "12345",
+        "email": "candidate@mail.com",
+        "date": "2025-06-29"
+      },
+      "expected_errors": [
+        "invalid_phone",
+        "missing_full_name"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          3776,
+          7501,
+          30089,
+          10893,
+          32257,
+          13909,
+          5295,
+          19049,
+          26844,
+          23453
+        ],
+        "counterparty_risk": 0.2,
+        "delay_days": 20,
+        "historical_failures": 2,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "590c2833-1f10-470c-8210-a59314f73afc",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "medical",
+      "source": "ocr_api",
+      "language": "ru",
+      "payload": {
+        "patient_id": "PT-7906",
+        "date": "2026-04-27",
+        "diagnosis": "ОРВИ",
+        "conclusion": "",
+        "doctor": "Dr. Adams"
+      },
+      "expected_errors": [
+        "missing_conclusion"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          24935,
+          16694,
+          6496,
+          4638,
+          4033,
+          18205,
+          15065,
+          3335,
+          11986,
+          17633
+        ],
+        "counterparty_risk": 0.14,
+        "delay_days": 42,
+        "historical_failures": 0,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "6ae24c1b-450e-4e23-8ffb-01bc59e258d6",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "technical",
+      "source": "ocr_api",
+      "language": "ru",
+      "payload": {
+        "spec_id": "SPEC-362",
+        "version": "2.3.1",
+        "release_date": "99.99.2026",
+        "component": "gateway",
+        "status": "draft"
+      },
+      "expected_errors": [
+        "invalid_date"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          12732,
+          22384,
+          9084,
+          3682,
+          22444,
+          26596,
+          27995,
+          14997,
+          6980,
+          17915
+        ],
+        "counterparty_risk": 0.12,
+        "delay_days": 19,
+        "historical_failures": 4,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "769c0629-c765-4666-971f-0443c8533d23",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "financial",
+      "source": "ocr_api",
+      "language": "en",
+      "payload": {
+        "document_number": "INV-1672",
+        "issue_date": "2026-03-30",
+        "due_date": "2026-04-26",
+        "counterparty_name": "Delta Ltd",
+        "counterparty_inn": "771596418012",
+        "subtotal": 28947.73,
+        "tax_amount": 5789.55,
+        "total_amount": 34737.28,
+        "currency": "USD",
+        "phone": "+79991234567"
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          2829,
+          29528,
+          34125,
+          8916,
+          30411,
+          25736,
+          32129,
+          12026,
+          30540,
+          13543
+        ],
+        "counterparty_risk": 0.56,
+        "delay_days": 41,
+        "historical_failures": 2,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "3ca21a45-3e5b-47b1-9419-e5bf549153ba",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "legal",
+      "source": "json",
+      "language": "en",
+      "payload": {
+        "contract_number": "CTR-706",
+        "start_date": "2026-03-06",
+        "end_date": "2026-04-23",
+        "party_a": "ООО Альфа",
+        "party_b": "ООО Альфа",
+        "contract_subject": "Тест",
+        "counterparty_inn": "1234567890"
+      },
+      "expected_errors": [
+        "weak_subject",
+        "identical_parties",
+        "invalid_inn"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          26837,
+          24046,
+          3880,
+          34394,
+          23300,
+          13917,
+          33952,
+          15901,
+          25253,
+          18931
+        ],
+        "counterparty_risk": 0.29,
+        "delay_days": 38,
+        "historical_failures": 2,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "379775c8-d178-42ea-a982-a4a312144923",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "hr",
+      "source": "ocr_api",
+      "language": "en",
+      "payload": {
+        "full_name": "",
+        "position": "Analyst",
+        "experience_years": 7,
+        "phone": "12345",
+        "email": "bad-email",
+        "date": "2025-08-02"
+      },
+      "expected_errors": [
+        "invalid_phone",
+        "invalid_email_like",
+        "missing_full_name"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          34166,
+          31371,
+          3130,
+          8098,
+          21283,
+          16522,
+          28502,
+          17945,
+          22067,
+          26184
+        ],
+        "counterparty_risk": 0.38,
+        "delay_days": 33,
+        "historical_failures": 2,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "c1238f92-0c9a-4492-ada4-7cfb5cbbe87b",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "medical",
+      "source": "manual",
+      "language": "ru",
+      "payload": {
+        "patient_id": "PT-6419",
+        "date": "2026-04-21",
+        "diagnosis": "Стресс",
+        "conclusion": "Рекомендована госпитализация",
+        "doctor": "Иванова О.В."
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          9907,
+          14621,
+          22679,
+          9835,
+          14133,
+          14552,
+          16180,
+          33732,
+          20120,
+          20546
+        ],
+        "counterparty_risk": 0.74,
+        "delay_days": 12,
+        "historical_failures": 2,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "ce3e9e5e-0dd1-457b-8ec0-7ffcd6c68890",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "technical",
+      "source": "json",
+      "language": "en",
+      "payload": {
+        "spec_id": "SPEC-409",
+        "version": "1.0.0",
+        "release_date": "99.99.2026",
+        "component": "pump",
+        "status": "review"
+      },
+      "expected_errors": [
+        "invalid_date"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          10275,
+          34170,
+          8723,
+          2803,
+          20634,
+          32762,
+          33373,
+          30866,
+          24328,
+          14082
+        ],
+        "counterparty_risk": 0.73,
+        "delay_days": 16,
+        "historical_failures": 3,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "c938485d-c3dd-4d8a-a910-e0b1dcfc63f1",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "financial",
+      "source": "json",
+      "language": "ru",
+      "payload": {
+        "document_number": "INV-2213",
+        "issue_date": "2026-03-01",
+        "due_date": "2026-04-23",
+        "counterparty_name": "ООО Альфа",
+        "counterparty_inn": "7707083893",
+        "subtotal": 20934.31,
+        "tax_amount": 4186.86,
+        "total_amount": 25121.17,
+        "currency": "RUB",
+        "phone": "8(999)-123-45-67"
+      },
+      "expected_errors": [
+        "phone_needs_normalization"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          29274,
+          16790,
+          26928,
+          31524,
+          31014,
+          21487,
+          30103,
+          22013,
+          5947,
+          8503
+        ],
+        "counterparty_risk": 0.71,
+        "delay_days": 13,
+        "historical_failures": 1,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "86ac383f-671a-40dd-9e0d-4529efa90e78",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "legal",
+      "source": "manual",
+      "language": "en",
+      "payload": {
+        "contract_number": "CTR-345",
+        "start_date": "2026-03-30",
+        "end_date": "2026-04-08",
+        "party_a": "ООО Альфа",
+        "party_b": "ООО Альфа",
+        "contract_subject": "Поставка оборудования",
+        "counterparty_inn": "7707083893"
+      },
+      "expected_errors": [
+        "identical_parties"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          21087,
+          4139,
+          17170,
+          20881,
+          20528,
+          31755,
+          6664,
+          17297,
+          19337,
+          14964
+        ],
+        "counterparty_risk": 0.35,
+        "delay_days": 34,
+        "historical_failures": 1,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "957118ff-c82c-41fb-ac00-80608038fe21",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "hr",
+      "source": "ocr_api",
+      "language": "en",
+      "payload": {
+        "full_name": "Иванов Иван",
+        "position": "Analyst",
+        "experience_years": 1,
+        "phone": "+15551234567",
+        "email": "bad-email",
+        "date": "2025-07-13"
+      },
+      "expected_errors": [
+        "invalid_email_like"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          30780,
+          10149,
+          32716,
+          21928,
+          28378,
+          19841,
+          34798,
+          34361,
+          30688,
+          7271
+        ],
+        "counterparty_risk": 0.47,
+        "delay_days": 27,
+        "historical_failures": 2,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "7725f3ac-9889-42d0-b96a-9d71bbe618ea",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "medical",
+      "source": "json",
+      "language": "ru",
+      "payload": {
+        "patient_id": "PT-4750",
+        "date": "2026-03-31",
+        "diagnosis": "Стресс",
+        "conclusion": "",
+        "doctor": "Иванова О.В."
+      },
+      "expected_errors": [
+        "missing_conclusion"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          32834,
+          30981,
+          20229,
+          13894,
+          30566,
+          34225,
+          7979,
+          32802,
+          24803,
+          28761
+        ],
+        "counterparty_risk": 0.28,
+        "delay_days": 42,
+        "historical_failures": 0,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "465383cb-24a4-4d2c-be81-d72f4ff98365",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "technical",
+      "source": "json",
+      "language": "en",
+      "payload": {
+        "spec_id": "SPEC-810",
+        "version": "2.3.1",
+        "release_date": "99.99.2026",
+        "component": "gateway",
+        "status": "review"
+      },
+      "expected_errors": [
+        "invalid_date"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          7771,
+          22612,
+          18541,
+          23186,
+          9597,
+          28488,
+          2075,
+          32276,
+          29082,
+          5552
+        ],
+        "counterparty_risk": 0.18,
+        "delay_days": 23,
+        "historical_failures": 4,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "a951bd3a-d77e-4aef-8be4-e81f2f51a0ee",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "financial",
+      "source": "json",
+      "language": "ru",
+      "payload": {
+        "document_number": "INV-4335",
+        "issue_date": "2026-04-09",
+        "due_date": "2026-04-26",
+        "counterparty_name": "ООО Бета",
+        "counterparty_inn": "7707083890",
+        "subtotal": 38359.54,
+        "tax_amount": 7671.91,
+        "total_amount": 46031.45,
+        "currency": "USD",
+        "phone": "8(999)-123-45-67"
+      },
+      "expected_errors": [
+        "invalid_inn",
+        "phone_needs_normalization"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          12379,
+          22365,
+          2896,
+          28738,
+          8108,
+          16725,
+          9435,
+          32241,
+          9698,
+          12090
+        ],
+        "counterparty_risk": 0.4,
+        "delay_days": 45,
+        "historical_failures": 2,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "3b56411b-f710-4450-a625-c225752e1f2c",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "legal",
+      "source": "ocr_api",
+      "language": "ru",
+      "payload": {
+        "contract_number": "CTR-583",
+        "start_date": "2026-03-12",
+        "end_date": "2026-04-14",
+        "party_a": "ООО Альфа",
+        "party_b": "ООО Бета",
+        "contract_subject": "Тест",
+        "counterparty_inn": "7707083893"
+      },
+      "expected_errors": [
+        "weak_subject"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          6575,
+          20104,
+          29193,
+          24274,
+          19509,
+          2168,
+          20536,
+          21566,
+          34089,
+          11738
+        ],
+        "counterparty_risk": 0.36,
+        "delay_days": 30,
+        "historical_failures": 2,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "f4fdcbaf-a5e9-4bd8-8391-b4bfa625693b",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "hr",
+      "source": "ocr_api",
+      "language": "en",
+      "payload": {
+        "full_name": "Петрова Анна",
+        "position": "QA Engineer",
+        "experience_years": 14,
+        "phone": "12345",
+        "email": "candidate@mail.com",
+        "date": "2025-05-21"
+      },
+      "expected_errors": [
+        "invalid_phone"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          17306,
+          28920,
+          4860,
+          22852,
+          32996,
+          26984,
+          27302,
+          11968,
+          34461,
+          4426
+        ],
+        "counterparty_risk": 0.14,
+        "delay_days": 37,
+        "historical_failures": 2,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "ad49a311-a15d-4d47-a291-94b6f5331b0b",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "medical",
+      "source": "json",
+      "language": "en",
+      "payload": {
+        "patient_id": "PT-8213",
+        "date": "2026-05-07",
+        "diagnosis": "Стресс",
+        "conclusion": "Рекомендована госпитализация",
+        "doctor": "Dr. Adams"
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          12116,
+          6903,
+          32768,
+          19368,
+          24187,
+          28049,
+          7263,
+          23532,
+          26904,
+          22752
+        ],
+        "counterparty_risk": 0.49,
+        "delay_days": 31,
+        "historical_failures": 4,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "87c74eb5-4847-4677-85c5-e3ea1709c8fd",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "technical",
+      "source": "json",
+      "language": "en",
+      "payload": {
+        "spec_id": "SPEC-340",
+        "version": "draft",
+        "release_date": "2024-06-12",
+        "component": "controller",
+        "status": "approved"
+      },
+      "expected_errors": [
+        "non_numeric_version"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          8451,
+          8586,
+          31076,
+          12902,
+          21625,
+          3897,
+          5014,
+          23258,
+          5677,
+          21226
+        ],
+        "counterparty_risk": 0.3,
+        "delay_days": 27,
+        "historical_failures": 1,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "03204085-4a1d-4f56-8a4b-22c28f383526",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "financial",
+      "source": "ocr_api",
+      "language": "ru",
+      "payload": {
+        "document_number": "INV-3785",
+        "issue_date": "2026-04-21",
+        "due_date": "2026-05-11",
+        "counterparty_name": "Delta Ltd",
+        "counterparty_inn": "771596418012",
+        "subtotal": 28947.51,
+        "tax_amount": 5789.5,
+        "total_amount": 34896.55,
+        "currency": "РУБ",
+        "phone": "+79991234567"
+      },
+      "expected_errors": [
+        "arithmetic_mismatch"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          17216,
+          32221,
+          18644,
+          32118,
+          18733,
+          2615,
+          32490,
+          20850,
+          12353,
+          6840
+        ],
+        "counterparty_risk": 0.36,
+        "delay_days": 22,
+        "historical_failures": 4,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "2c8e74e5-e600-4c78-ba44-cab72e4f6561",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "legal",
+      "source": "json",
+      "language": "ru",
+      "payload": {
+        "contract_number": "CTR-806",
+        "start_date": "2026-03-10",
+        "end_date": "2026-04-14",
+        "party_a": "АО Сфера",
+        "party_b": "ООО Альфа",
+        "contract_subject": "Оказание услуг",
+        "counterparty_inn": "1234567890"
+      },
+      "expected_errors": [
+        "invalid_inn"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          26993,
+          25524,
+          21390,
+          21348,
+          3437,
+          27939,
+          19988,
+          2530,
+          5214,
+          34553
+        ],
+        "counterparty_risk": 0.63,
+        "delay_days": 18,
+        "historical_failures": 1,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "d7069ac1-d7b4-49a6-8da2-7309dd272402",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "hr",
+      "source": "json",
+      "language": "en",
+      "payload": {
+        "full_name": "",
+        "position": "HR Manager",
+        "experience_years": 8,
+        "phone": "+15551234567",
+        "email": "candidate@mail.com",
+        "date": "2025-06-26"
+      },
+      "expected_errors": [
+        "missing_full_name"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          30889,
+          4186,
+          25911,
+          10612,
+          7906,
+          21340,
+          23411,
+          29230,
+          13510,
+          15159
+        ],
+        "counterparty_risk": 0.14,
+        "delay_days": 34,
+        "historical_failures": 2,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "07a3db3f-b4f0-480c-8a39-8d863e52279b",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "medical",
+      "source": "manual",
+      "language": "ru",
+      "payload": {
+        "patient_id": "PT-5210",
+        "date": "2026-03-16",
+        "diagnosis": "Гипертония",
+        "conclusion": "Рекомендована госпитализация",
+        "doctor": "Иванова О.В."
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          11224,
+          16785,
+          28044,
+          25971,
+          7918,
+          27858,
+          2912,
+          19331,
+          10099,
+          31804
+        ],
+        "counterparty_risk": 0.31,
+        "delay_days": 43,
+        "historical_failures": 2,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "b4a72eac-5d49-4a22-a9a0-a9e6598fdc0e",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "technical",
+      "source": "ocr_api",
+      "language": "en",
+      "payload": {
+        "spec_id": "SPEC-480",
+        "version": "1.0.0",
+        "release_date": "2024-06-21",
+        "component": "pump",
+        "status": "review"
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          16507,
+          6142,
+          32426,
+          21804,
+          28758,
+          9646,
+          11160,
+          4971,
+          4438,
+          21946
+        ],
+        "counterparty_risk": 0.75,
+        "delay_days": 7,
+        "historical_failures": 0,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "bc96a311-7f17-40fa-8619-0b207e4d1d34",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "financial",
+      "source": "ocr_api",
+      "language": "ru",
+      "payload": {
+        "document_number": "INV-8432",
+        "issue_date": "2026-03-27",
+        "due_date": "2026-04-22",
+        "counterparty_name": "Delta Ltd",
+        "counterparty_inn": "771596418012",
+        "subtotal": 8079.71,
+        "tax_amount": 1615.94,
+        "total_amount": 9695.65,
+        "currency": "РУБ",
+        "phone": "+79991234567"
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          34069,
+          28746,
+          20333,
+          4144,
+          26283,
+          16238,
+          31057,
+          31143,
+          17473,
+          25768
+        ],
+        "counterparty_risk": 0.12,
+        "delay_days": 43,
+        "historical_failures": 2,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "a06a660a-9418-469c-bf46-9f85e2afe6fa",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "legal",
+      "source": "ocr_api",
+      "language": "ru",
+      "payload": {
+        "contract_number": "CTR-294",
+        "start_date": "2026-04-12",
+        "end_date": "2026-04-14",
+        "party_a": "ООО Альфа",
+        "party_b": "Sigma Corp",
+        "contract_subject": "Тест",
+        "counterparty_inn": "7707083893"
+      },
+      "expected_errors": [
+        "weak_subject"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          5314,
+          23856,
+          17962,
+          10252,
+          15448,
+          6496,
+          15576,
+          16152,
+          17269,
+          23532
+        ],
+        "counterparty_risk": 0.59,
+        "delay_days": 38,
+        "historical_failures": 0,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "28945fee-5de0-4ecd-b4e3-4e4a89e3e789",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "hr",
+      "source": "json",
+      "language": "ru",
+      "payload": {
+        "full_name": "Иванов Иван",
+        "position": "Analyst",
+        "experience_years": 8,
+        "phone": "+15551234567",
+        "email": "candidate@mail.com",
+        "date": "2025-06-09"
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          25477,
+          17593,
+          23218,
+          3034,
+          13419,
+          19391,
+          5434,
+          10307,
+          29588,
+          9448
+        ],
+        "counterparty_risk": 0.57,
+        "delay_days": 30,
+        "historical_failures": 3,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "09dee273-d6d0-4773-9ae9-af68b7e1b24b",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "medical",
+      "source": "ocr_api",
+      "language": "en",
+      "payload": {
+        "patient_id": "PT-2786",
+        "date": "2026-04-15",
+        "diagnosis": "Стресс",
+        "conclusion": "",
+        "doctor": "Dr. Adams"
+      },
+      "expected_errors": [
+        "missing_conclusion"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          32018,
+          4041,
+          5986,
+          33390,
+          28320,
+          29936,
+          9075,
+          34130,
+          31069,
+          6816
+        ],
+        "counterparty_risk": 0.68,
+        "delay_days": 20,
+        "historical_failures": 4,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "de33a918-d410-42b7-accc-5e05b96381b9",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "technical",
+      "source": "manual",
+      "language": "en",
+      "payload": {
+        "spec_id": "SPEC-381",
+        "version": "draft",
+        "release_date": "99.99.2026",
+        "component": "gateway",
+        "status": "draft"
+      },
+      "expected_errors": [
+        "non_numeric_version",
+        "invalid_date"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          21326,
+          31734,
+          30193,
+          8499,
+          9498,
+          16091,
+          30185,
+          31593,
+          16974,
+          29119
+        ],
+        "counterparty_risk": 0.29,
+        "delay_days": 29,
+        "historical_failures": 3,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "7233f71a-d6cf-4a05-ba60-3af32c0ac99b",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "financial",
+      "source": "json",
+      "language": "ru",
+      "payload": {
+        "document_number": "INV-6120",
+        "issue_date": "2026-02-17",
+        "due_date": "2026-05-05",
+        "counterparty_name": "АО Гамма",
+        "counterparty_inn": "7707083893",
+        "subtotal": 16658.59,
+        "tax_amount": 3331.72,
+        "total_amount": 19990.31,
+        "currency": "РУБ",
+        "phone": "8(999)-123-45-67"
+      },
+      "expected_errors": [
+        "phone_needs_normalization"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          8109,
+          30303,
+          8328,
+          26421,
+          10527,
+          5930,
+          23603,
+          10010,
+          28922,
+          25173
+        ],
+        "counterparty_risk": 0.66,
+        "delay_days": 27,
+        "historical_failures": 0,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "20b6cbef-e998-4a26-8316-b4a6c57fab07",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "legal",
+      "source": "json",
+      "language": "en",
+      "payload": {
+        "contract_number": "CTR-206",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-11",
+        "party_a": "ООО Альфа",
+        "party_b": "ООО Альфа",
+        "contract_subject": "Оказание услуг",
+        "counterparty_inn": "1234567890"
+      },
+      "expected_errors": [
+        "identical_parties",
+        "invalid_inn"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          26088,
+          9529,
+          20256,
+          16821,
+          30122,
+          3720,
+          19527,
+          3897,
+          13823,
+          19909
+        ],
+        "counterparty_risk": 0.54,
+        "delay_days": 19,
+        "historical_failures": 2,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "9881f426-9ac1-419c-b604-79aabe551fa7",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "hr",
+      "source": "json",
+      "language": "ru",
+      "payload": {
+        "full_name": "",
+        "position": "HR Manager",
+        "experience_years": 12,
+        "phone": "+15551234567",
+        "email": "candidate@mail.com",
+        "date": "2025-04-29"
+      },
+      "expected_errors": [
+        "missing_full_name"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          16098,
+          26654,
+          29514,
+          31730,
+          24340,
+          12315,
+          26251,
+          22423,
+          23258,
+          7567
+        ],
+        "counterparty_risk": 0.67,
+        "delay_days": 9,
+        "historical_failures": 1,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "5638085a-365a-4a4e-b0aa-9943c6ac3caa",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "medical",
+      "source": "manual",
+      "language": "en",
+      "payload": {
+        "patient_id": "PT-5458",
+        "date": "2026-04-15",
+        "diagnosis": "Стресс",
+        "conclusion": "Рекомендована госпитализация",
+        "doctor": "Иванова О.В."
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          19902,
+          16127,
+          9459,
+          24621,
+          30174,
+          9267,
+          20562,
+          33891,
+          22212,
+          4976
+        ],
+        "counterparty_risk": 0.2,
+        "delay_days": 38,
+        "historical_failures": 0,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "a258d45f-d306-4b91-be30-638ddd2414d2",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "technical",
+      "source": "json",
+      "language": "en",
+      "payload": {
+        "spec_id": "SPEC-316",
+        "version": "1.0.0",
+        "release_date": "99.99.2026",
+        "component": "controller",
+        "status": "review"
+      },
+      "expected_errors": [
+        "invalid_date"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          30223,
+          13514,
+          10466,
+          26917,
+          17080,
+          34785,
+          25210,
+          6723,
+          28022,
+          4772
+        ],
+        "counterparty_risk": 0.36,
+        "delay_days": 29,
+        "historical_failures": 0,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "e28d1137-da5a-4e39-b632-dbb41631727b",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "financial",
+      "source": "manual",
+      "language": "en",
+      "payload": {
+        "document_number": "INV-7843",
+        "issue_date": "2026-04-06",
+        "due_date": "2026-05-10",
+        "counterparty_name": "Delta Ltd",
+        "counterparty_inn": "7707083893",
+        "subtotal": 29309.88,
+        "tax_amount": 5861.98,
+        "total_amount": 35171.86,
+        "currency": "USD",
+        "phone": "+79991234567"
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          7775,
+          30620,
+          8937,
+          17945,
+          30552,
+          28243,
+          7154,
+          27936,
+          22334,
+          24250
+        ],
+        "counterparty_risk": 0.21,
+        "delay_days": 10,
+        "historical_failures": 0,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "1b8a3f20-92d4-4dbf-b6e3-60f365992954",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "legal",
+      "source": "manual",
+      "language": "ru",
+      "payload": {
+        "contract_number": "CTR-894",
+        "start_date": "2026-02-13",
+        "end_date": "2026-04-21",
+        "party_a": "ООО Альфа",
+        "party_b": "ООО Альфа",
+        "contract_subject": "Тест",
+        "counterparty_inn": "7707083893"
+      },
+      "expected_errors": [
+        "weak_subject",
+        "identical_parties"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          13370,
+          12018,
+          6938,
+          13609,
+          34382,
+          32405,
+          31419,
+          23181,
+          22718,
+          11893
+        ],
+        "counterparty_risk": 0.36,
+        "delay_days": 30,
+        "historical_failures": 3,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "99e1b39e-6b5a-419f-a5a6-aecf96ccd16b",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "hr",
+      "source": "json",
+      "language": "ru",
+      "payload": {
+        "full_name": "Петрова Анна",
+        "position": "Analyst",
+        "experience_years": 11,
+        "phone": "+15551234567",
+        "email": "bad-email",
+        "date": "2025-09-19"
+      },
+      "expected_errors": [
+        "invalid_email_like"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          26165,
+          20813,
+          7028,
+          7917,
+          27197,
+          32324,
+          4688,
+          31473,
+          14336,
+          23071
+        ],
+        "counterparty_risk": 0.47,
+        "delay_days": 32,
+        "historical_failures": 1,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "12e36237-c0d6-4f90-b979-07b22dfb0974",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "medical",
+      "source": "ocr_api",
+      "language": "en",
+      "payload": {
+        "patient_id": "PT-6626",
+        "date": "2026-03-29",
+        "diagnosis": "ОРВИ",
+        "conclusion": "",
+        "doctor": "Dr. Adams"
+      },
+      "expected_errors": [
+        "missing_conclusion"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          30797,
+          12403,
+          25848,
+          26435,
+          20539,
+          27389,
+          28789,
+          24175,
+          5431,
+          23931
+        ],
+        "counterparty_risk": 0.1,
+        "delay_days": 6,
+        "historical_failures": 4,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "acad41f5-383b-4859-9b97-15f2e6c36356",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "technical",
+      "source": "ocr_api",
+      "language": "ru",
+      "payload": {
+        "spec_id": "SPEC-841",
+        "version": "draft",
+        "release_date": "99.99.2026",
+        "component": "pump",
+        "status": "review"
+      },
+      "expected_errors": [
+        "non_numeric_version",
+        "invalid_date"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          24925,
+          22331,
+          27687,
+          10450,
+          7552,
+          22288,
+          26686,
+          23527,
+          10375,
+          8124
+        ],
+        "counterparty_risk": 0.5,
+        "delay_days": 27,
+        "historical_failures": 4,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "c493fa56-1cbc-47c2-b48c-aac897c948ea",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "financial",
+      "source": "manual",
+      "language": "ru",
+      "payload": {
+        "document_number": "INV-6598",
+        "issue_date": "2026-02-04",
+        "due_date": "2026-04-28",
+        "counterparty_name": "ООО Бета",
+        "counterparty_inn": "7707083893",
+        "subtotal": 16480.0,
+        "tax_amount": 3296.0,
+        "total_amount": 19966.48,
+        "currency": "RUB",
+        "phone": "+79991234567"
+      },
+      "expected_errors": [
+        "arithmetic_mismatch"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          4473,
+          24070,
+          10588,
+          26688,
+          12109,
+          12633,
+          13851,
+          12848,
+          30683,
+          4863
+        ],
+        "counterparty_risk": 0.34,
+        "delay_days": 43,
+        "historical_failures": 1,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "4e43f5e1-88a3-4275-a03c-6be18b378156",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "legal",
+      "source": "manual",
+      "language": "en",
+      "payload": {
+        "contract_number": "CTR-902",
+        "start_date": "2026-01-19",
+        "end_date": "2026-04-29",
+        "party_a": "ООО Альфа",
+        "party_b": "ООО Бета",
+        "contract_subject": "Сопровождение проекта",
+        "counterparty_inn": "1234567890"
+      },
+      "expected_errors": [
+        "invalid_inn"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          32256,
+          20466,
+          27026,
+          34958,
+          29437,
+          12620,
+          15087,
+          11070,
+          18384,
+          5419
+        ],
+        "counterparty_risk": 0.5,
+        "delay_days": 23,
+        "historical_failures": 4,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "eaf082bb-4cc6-4260-9dee-cebedb8f93c3",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "hr",
+      "source": "ocr_api",
+      "language": "ru",
+      "payload": {
+        "full_name": "Петрова Анна",
+        "position": "Analyst",
+        "experience_years": 9,
+        "phone": "+15551234567",
+        "email": "candidate@mail.com",
+        "date": "2025-12-25"
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          30670,
+          8010,
+          16551,
+          31565,
+          24910,
+          3747,
+          29190,
+          5490,
+          27982,
+          34899
+        ],
+        "counterparty_risk": 0.31,
+        "delay_days": 24,
+        "historical_failures": 0,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "4f157758-79b6-409f-af3b-8187c81d6212",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "medical",
+      "source": "json",
+      "language": "en",
+      "payload": {
+        "patient_id": "PT-6221",
+        "date": "2026-03-15",
+        "diagnosis": "ОРВИ",
+        "conclusion": "",
+        "doctor": "Dr. Adams"
+      },
+      "expected_errors": [
+        "missing_conclusion"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          32962,
+          11095,
+          32743,
+          31399,
+          2344,
+          7192,
+          3245,
+          18772,
+          16133,
+          11798
+        ],
+        "counterparty_risk": 0.43,
+        "delay_days": 38,
+        "historical_failures": 4,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "9a294c86-4917-4a49-8ac9-89be98a8e74f",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "technical",
+      "source": "manual",
+      "language": "en",
+      "payload": {
+        "spec_id": "SPEC-395",
+        "version": "1.0.0",
+        "release_date": "99.99.2026",
+        "component": "pump",
+        "status": "approved"
+      },
+      "expected_errors": [
+        "invalid_date"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          6116,
+          9265,
+          34756,
+          3077,
+          17855,
+          11409,
+          21088,
+          30130,
+          2102,
+          25122
+        ],
+        "counterparty_risk": 0.22,
+        "delay_days": 26,
+        "historical_failures": 1,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "87ff76d7-6d8d-4410-954f-5e2c23d428f1",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "financial",
+      "source": "manual",
+      "language": "en",
+      "payload": {
+        "document_number": "INV-9914",
+        "issue_date": "2026-03-10",
+        "due_date": "2026-04-18",
+        "counterparty_name": "ООО Альфа",
+        "counterparty_inn": "7707083890",
+        "subtotal": 18989.28,
+        "tax_amount": 3797.86,
+        "total_amount": 22978.05,
+        "currency": "USD",
+        "phone": "+79991234567"
+      },
+      "expected_errors": [
+        "arithmetic_mismatch",
+        "invalid_inn"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          18623,
+          3064,
+          25402,
+          6427,
+          24596,
+          17802,
+          8793,
+          23791,
+          10743,
+          4905
+        ],
+        "counterparty_risk": 0.3,
+        "delay_days": 21,
+        "historical_failures": 1,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "8d4cfd06-7e6a-48c1-a3cf-70e63439b64f",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "legal",
+      "source": "manual",
+      "language": "ru",
+      "payload": {
+        "contract_number": "CTR-746",
+        "start_date": "2026-03-28",
+        "end_date": "2026-05-05",
+        "party_a": "ООО Альфа",
+        "party_b": "Sigma Corp",
+        "contract_subject": "Оказание услуг",
+        "counterparty_inn": "1234567890"
+      },
+      "expected_errors": [
+        "invalid_inn"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          4870,
+          15072,
+          4746,
+          22682,
+          22321,
+          28098,
+          33024,
+          18601,
+          4399,
+          14524
+        ],
+        "counterparty_risk": 0.25,
+        "delay_days": 3,
+        "historical_failures": 2,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "82fe4050-40db-4ccb-b14e-4582c24fbab1",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "hr",
+      "source": "manual",
+      "language": "en",
+      "payload": {
+        "full_name": "",
+        "position": "QA Engineer",
+        "experience_years": 12,
+        "phone": "12345",
+        "email": "bad-email",
+        "date": "2025-11-21"
+      },
+      "expected_errors": [
+        "invalid_phone",
+        "invalid_email_like",
+        "missing_full_name"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          26074,
+          19479,
+          7414,
+          29820,
+          7172,
+          30220,
+          13826,
+          21252,
+          23050,
+          8723
+        ],
+        "counterparty_risk": 0.11,
+        "delay_days": 42,
+        "historical_failures": 2,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "fc27ed89-6ebf-46db-b35c-a6829823d6ba",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "medical",
+      "source": "json",
+      "language": "en",
+      "payload": {
+        "patient_id": "PT-7981",
+        "date": "2026-05-03",
+        "diagnosis": "Стресс",
+        "conclusion": "",
+        "doctor": "Иванова О.В."
+      },
+      "expected_errors": [
+        "missing_conclusion"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          30504,
+          19993,
+          5759,
+          6917,
+          28621,
+          25809,
+          12484,
+          4040,
+          11357,
+          30716
+        ],
+        "counterparty_risk": 0.07,
+        "delay_days": 4,
+        "historical_failures": 1,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "8541be5b-9247-40b2-8dce-3b38d35e7162",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "technical",
+      "source": "manual",
+      "language": "en",
+      "payload": {
+        "spec_id": "SPEC-680",
+        "version": "1.0.0",
+        "release_date": "99.99.2026",
+        "component": "pump",
+        "status": "draft"
+      },
+      "expected_errors": [
+        "invalid_date"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          31094,
+          7038,
+          11023,
+          26048,
+          28085,
+          22603,
+          20264,
+          18358,
+          9434,
+          3698
+        ],
+        "counterparty_risk": 0.56,
+        "delay_days": 31,
+        "historical_failures": 4,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "7d4a98fc-bada-4ca6-b861-608ec30468f0",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "financial",
+      "source": "json",
+      "language": "ru",
+      "payload": {
+        "document_number": "INV-5264",
+        "issue_date": "2026-02-12",
+        "due_date": "2026-04-29",
+        "counterparty_name": "ООО Бета",
+        "counterparty_inn": "771596418012",
+        "subtotal": 7211.41,
+        "tax_amount": 1442.28,
+        "total_amount": 8653.69,
+        "currency": "USD",
+        "phone": "8(999)-123-45-67"
+      },
+      "expected_errors": [
+        "phone_needs_normalization"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          6853,
+          31625,
+          13315,
+          31170,
+          7753,
+          22944,
+          24768,
+          6255,
+          21029,
+          21657
+        ],
+        "counterparty_risk": 0.65,
+        "delay_days": 45,
+        "historical_failures": 1,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "0a47c687-d7d5-4e42-8bc8-8059c80a8797",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "legal",
+      "source": "ocr_api",
+      "language": "en",
+      "payload": {
+        "contract_number": "CTR-305",
+        "start_date": "2026-04-08",
+        "end_date": "2026-04-28",
+        "party_a": "АО Сфера",
+        "party_b": "ООО Альфа",
+        "contract_subject": "Тест",
+        "counterparty_inn": "1234567890"
+      },
+      "expected_errors": [
+        "weak_subject",
+        "invalid_inn"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          32631,
+          10504,
+          7650,
+          6308,
+          22269,
+          28093,
+          33369,
+          28921,
+          28832,
+          6833
+        ],
+        "counterparty_risk": 0.14,
+        "delay_days": 20,
+        "historical_failures": 0,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "0857687c-163b-4aba-93c1-144cc7840217",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "hr",
+      "source": "json",
+      "language": "ru",
+      "payload": {
+        "full_name": "",
+        "position": "QA Engineer",
+        "experience_years": 4,
+        "phone": "+15551234567",
+        "email": "candidate@mail.com",
+        "date": "2025-10-04"
+      },
+      "expected_errors": [
+        "missing_full_name"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          12028,
+          21931,
+          12790,
+          12614,
+          23145,
+          16776,
+          24676,
+          20615,
+          7168,
+          18423
+        ],
+        "counterparty_risk": 0.19,
+        "delay_days": 35,
+        "historical_failures": 2,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "05768171-7946-42b0-a631-bfe27bec0849",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "medical",
+      "source": "ocr_api",
+      "language": "en",
+      "payload": {
+        "patient_id": "PT-9740",
+        "date": "2026-05-08",
+        "diagnosis": "Стресс",
+        "conclusion": "Амбулаторное наблюдение",
+        "doctor": "Dr. Adams"
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          4699,
+          3859,
+          7323,
+          4979,
+          19344,
+          15815,
+          29301,
+          3984,
+          34639,
+          20983
+        ],
+        "counterparty_risk": 0.5,
+        "delay_days": 19,
+        "historical_failures": 3,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "17f0cbc3-3e06-4a62-8e56-236ed11f8e3f",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "technical",
+      "source": "json",
+      "language": "ru",
+      "payload": {
+        "spec_id": "SPEC-801",
+        "version": "2.3.1",
+        "release_date": "2025-07-13",
+        "component": "controller",
+        "status": "approved"
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          30809,
+          29238,
+          33735,
+          32437,
+          15370,
+          24294,
+          11415,
+          22485,
+          22926,
+          24634
+        ],
+        "counterparty_risk": 0.73,
+        "delay_days": 8,
+        "historical_failures": 2,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "ef1682ba-1b0a-4350-be65-e572da22d9b7",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "financial",
+      "source": "json",
+      "language": "en",
+      "payload": {
+        "document_number": "INV-5061",
+        "issue_date": "2026-04-25",
+        "due_date": "2026-05-10",
+        "counterparty_name": "ООО Альфа",
+        "counterparty_inn": "7707083890",
+        "subtotal": 24123.92,
+        "tax_amount": 4824.78,
+        "total_amount": 29005.86,
+        "currency": "USD",
+        "phone": "8(999)-123-45-67"
+      },
+      "expected_errors": [
+        "arithmetic_mismatch",
+        "invalid_inn",
+        "phone_needs_normalization"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          22494,
+          14440,
+          12442,
+          34654,
+          32593,
+          34686,
+          22220,
+          34595,
+          3518,
+          7901
+        ],
+        "counterparty_risk": 0.71,
+        "delay_days": 32,
+        "historical_failures": 3,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "4c862843-2e14-419f-b83c-7da25b2f5fe6",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "legal",
+      "source": "ocr_api",
+      "language": "ru",
+      "payload": {
+        "contract_number": "CTR-149",
+        "start_date": "2026-05-01",
+        "end_date": "2026-04-25",
+        "party_a": "АО Сфера",
+        "party_b": "Sigma Corp",
+        "contract_subject": "Тест",
+        "counterparty_inn": "1234567890"
+      },
+      "expected_errors": [
+        "weak_subject",
+        "invalid_inn"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          9044,
+          30241,
+          10777,
+          19332,
+          25971,
+          28427,
+          25982,
+          4965,
+          28252,
+          5352
+        ],
+        "counterparty_risk": 0.45,
+        "delay_days": 12,
+        "historical_failures": 2,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "e190e02a-7c48-4d97-a8eb-68d5dda163d0",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "hr",
+      "source": "manual",
+      "language": "en",
+      "payload": {
+        "full_name": "",
+        "position": "QA Engineer",
+        "experience_years": 8,
+        "phone": "+15551234567",
+        "email": "candidate@mail.com",
+        "date": "2026-03-25"
+      },
+      "expected_errors": [
+        "missing_full_name"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          25960,
+          11454,
+          15045,
+          28305,
+          34773,
+          4638,
+          4969,
+          4550,
+          10980,
+          23826
+        ],
+        "counterparty_risk": 0.61,
+        "delay_days": 33,
+        "historical_failures": 3,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "b3999c0e-fea1-4e5a-a67a-37461efabe9b",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "medical",
+      "source": "ocr_api",
+      "language": "en",
+      "payload": {
+        "patient_id": "PT-9446",
+        "date": "2026-05-05",
+        "diagnosis": "Гипертония",
+        "conclusion": "Рекомендована госпитализация",
+        "doctor": "Dr. Adams"
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          24044,
+          34102,
+          21647,
+          33122,
+          3090,
+          26140,
+          23708,
+          9183,
+          29298,
+          22163
+        ],
+        "counterparty_risk": 0.61,
+        "delay_days": 44,
+        "historical_failures": 0,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "ec7c285b-f54e-45cf-8499-48f27f1d79bc",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "technical",
+      "source": "ocr_api",
+      "language": "en",
+      "payload": {
+        "spec_id": "SPEC-771",
+        "version": "draft",
+        "release_date": "99.99.2026",
+        "component": "pump",
+        "status": "draft"
+      },
+      "expected_errors": [
+        "non_numeric_version",
+        "invalid_date"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          13174,
+          26916,
+          11684,
+          17872,
+          4069,
+          9202,
+          14503,
+          3241,
+          30903,
+          22558
+        ],
+        "counterparty_risk": 0.34,
+        "delay_days": 26,
+        "historical_failures": 1,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "c6c91dbe-f38c-431e-9d40-134f21cd89e5",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "financial",
+      "source": "manual",
+      "language": "en",
+      "payload": {
+        "document_number": "INV-2020",
+        "issue_date": "2026-02-12",
+        "due_date": "2026-05-09",
+        "counterparty_name": "ООО Бета",
+        "counterparty_inn": "771596418012",
+        "subtotal": 31156.69,
+        "tax_amount": 6231.34,
+        "total_amount": 37484.99,
+        "currency": "USD",
+        "phone": "8(999)-123-45-67"
+      },
+      "expected_errors": [
+        "arithmetic_mismatch",
+        "phone_needs_normalization"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          13349,
+          32124,
+          24434,
+          25218,
+          19325,
+          33731,
+          14600,
+          18155,
+          20284,
+          21562
+        ],
+        "counterparty_risk": 0.21,
+        "delay_days": 19,
+        "historical_failures": 2,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "1af31fbd-169c-4e25-a926-a4d71b81ae8b",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "legal",
+      "source": "ocr_api",
+      "language": "en",
+      "payload": {
+        "contract_number": "CTR-424",
+        "start_date": "2026-01-11",
+        "end_date": "2026-04-21",
+        "party_a": "АО Сфера",
+        "party_b": "ООО Бета",
+        "contract_subject": "Оказание услуг",
+        "counterparty_inn": "7707083893"
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          27856,
+          24618,
+          11599,
+          21035,
+          4756,
+          20850,
+          7179,
+          24699,
+          30991,
+          18806
+        ],
+        "counterparty_risk": 0.57,
+        "delay_days": 13,
+        "historical_failures": 1,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "2a542418-4600-4a0f-aeeb-d746402eea42",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "hr",
+      "source": "ocr_api",
+      "language": "ru",
+      "payload": {
+        "full_name": "Петрова Анна",
+        "position": "QA Engineer",
+        "experience_years": 4,
+        "phone": "+15551234567",
+        "email": "candidate@mail.com",
+        "date": "2026-01-09"
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          17259,
+          5440,
+          8566,
+          29086,
+          23646,
+          32959,
+          8589,
+          11009,
+          2339,
+          12350
+        ],
+        "counterparty_risk": 0.33,
+        "delay_days": 30,
+        "historical_failures": 3,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "aabadd98-c776-4366-8a8e-1a80a90e46ea",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "medical",
+      "source": "ocr_api",
+      "language": "ru",
+      "payload": {
+        "patient_id": "PT-5706",
+        "date": "2026-04-23",
+        "diagnosis": "Гипертония",
+        "conclusion": "Амбулаторное наблюдение",
+        "doctor": "Dr. Adams"
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          4444,
+          13473,
+          29386,
+          13520,
+          4381,
+          28017,
+          34465,
+          14210,
+          20970,
+          4455
+        ],
+        "counterparty_risk": 0.06,
+        "delay_days": 36,
+        "historical_failures": 4,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "debb83f8-45e0-4f2e-8bc9-174dce418d1b",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "technical",
+      "source": "manual",
+      "language": "ru",
+      "payload": {
+        "spec_id": "SPEC-443",
+        "version": "2.3.1",
+        "release_date": "2025-02-02",
+        "component": "gateway",
+        "status": "draft"
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          32672,
+          19880,
+          14636,
+          9382,
+          23671,
+          12649,
+          32075,
+          18860,
+          14202,
+          2923
+        ],
+        "counterparty_risk": 0.57,
+        "delay_days": 18,
+        "historical_failures": 4,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "bc9c1a4d-dac7-479b-a23e-db6cf239c376",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "financial",
+      "source": "json",
+      "language": "en",
+      "payload": {
+        "document_number": "INV-8007",
+        "issue_date": "2026-03-09",
+        "due_date": "2026-05-03",
+        "counterparty_name": "ООО Альфа",
+        "counterparty_inn": "7707083890",
+        "subtotal": 43023.11,
+        "tax_amount": 8604.62,
+        "total_amount": 51807.65,
+        "currency": "РУБ",
+        "phone": "+79991234567"
+      },
+      "expected_errors": [
+        "arithmetic_mismatch",
+        "invalid_inn"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          23207,
+          18256,
+          2447,
+          19090,
+          27137,
+          17435,
+          31277,
+          19497,
+          23602,
+          21788
+        ],
+        "counterparty_risk": 0.46,
+        "delay_days": 36,
+        "historical_failures": 0,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "f6eb442d-eec9-4fb7-9cff-5b7c351f686b",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "legal",
+      "source": "ocr_api",
+      "language": "en",
+      "payload": {
+        "contract_number": "CTR-341",
+        "start_date": "2026-04-28",
+        "end_date": "2026-05-06",
+        "party_a": "АО Сфера",
+        "party_b": "ООО Бета",
+        "contract_subject": "Сопровождение проекта",
+        "counterparty_inn": "7707083893"
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          9694,
+          21335,
+          26087,
+          16473,
+          16360,
+          10753,
+          33338,
+          12039,
+          31817,
+          26485
+        ],
+        "counterparty_risk": 0.34,
+        "delay_days": 35,
+        "historical_failures": 3,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "4241b288-8b60-4b16-86f2-3bd8bc430658",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "hr",
+      "source": "json",
+      "language": "ru",
+      "payload": {
+        "full_name": "Петрова Анна",
+        "position": "HR Manager",
+        "experience_years": 2,
+        "phone": "12345",
+        "email": "bad-email",
+        "date": "2026-04-04"
+      },
+      "expected_errors": [
+        "invalid_phone",
+        "invalid_email_like"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          15248,
+          11820,
+          12783,
+          23503,
+          30956,
+          9617,
+          15461,
+          34035,
+          7959,
+          31195
+        ],
+        "counterparty_risk": 0.62,
+        "delay_days": 29,
+        "historical_failures": 1,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "82a5117a-5a63-4d44-a10a-c707e09f1f58",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "medical",
+      "source": "manual",
+      "language": "ru",
+      "payload": {
+        "patient_id": "PT-1945",
+        "date": "2026-04-08",
+        "diagnosis": "Гипертония",
+        "conclusion": "",
+        "doctor": "Dr. Adams"
+      },
+      "expected_errors": [
+        "missing_conclusion"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          16280,
+          6786,
+          4968,
+          29767,
+          24579,
+          6178,
+          5948,
+          6523,
+          32937,
+          4079
+        ],
+        "counterparty_risk": 0.25,
+        "delay_days": 11,
+        "historical_failures": 1,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "3d06a8d9-b39e-497e-bbfc-cc1c876c43bf",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "technical",
+      "source": "ocr_api",
+      "language": "ru",
+      "payload": {
+        "spec_id": "SPEC-491",
+        "version": "2.3.1",
+        "release_date": "99.99.2026",
+        "component": "controller",
+        "status": "approved"
+      },
+      "expected_errors": [
+        "invalid_date"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          24791,
+          9774,
+          13696,
+          27759,
+          10345,
+          16594,
+          2227,
+          3489,
+          21553,
+          32343
+        ],
+        "counterparty_risk": 0.52,
+        "delay_days": 34,
+        "historical_failures": 3,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "d666a1e5-302c-41ca-844d-2878d572d329",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "financial",
+      "source": "manual",
+      "language": "ru",
+      "payload": {
+        "document_number": "INV-6671",
+        "issue_date": "2026-04-24",
+        "due_date": "2026-05-05",
+        "counterparty_name": "ООО Бета",
+        "counterparty_inn": "771596418012",
+        "subtotal": 13504.33,
+        "tax_amount": 2700.87,
+        "total_amount": 16205.2,
+        "currency": "RUB",
+        "phone": "+79991234567"
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          17772,
+          15505,
+          6409,
+          8612,
+          4200,
+          31257,
+          5190,
+          18038,
+          4899,
+          28362
+        ],
+        "counterparty_risk": 0.36,
+        "delay_days": 34,
+        "historical_failures": 1,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "cfc7cc19-5207-451d-8282-2273801f0fcd",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "legal",
+      "source": "manual",
+      "language": "ru",
+      "payload": {
+        "contract_number": "CTR-339",
+        "start_date": "2025-11-07",
+        "end_date": "2026-04-07",
+        "party_a": "АО Сфера",
+        "party_b": "Sigma Corp",
+        "contract_subject": "Тест",
+        "counterparty_inn": "1234567890"
+      },
+      "expected_errors": [
+        "weak_subject",
+        "invalid_inn"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          16486,
+          29103,
+          21693,
+          20032,
+          5994,
+          13477,
+          29997,
+          34481,
+          5072,
+          24571
+        ],
+        "counterparty_risk": 0.71,
+        "delay_days": 42,
+        "historical_failures": 3,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "3629738a-f920-483a-a590-3cb08a9e06f3",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "hr",
+      "source": "manual",
+      "language": "ru",
+      "payload": {
+        "full_name": "John Smith",
+        "position": "Analyst",
+        "experience_years": 9,
+        "phone": "12345",
+        "email": "candidate@mail.com",
+        "date": "2025-04-22"
+      },
+      "expected_errors": [
+        "invalid_phone"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          16768,
+          21709,
+          11460,
+          32344,
+          5776,
+          29045,
+          29296,
+          10787,
+          27455,
+          17915
+        ],
+        "counterparty_risk": 0.23,
+        "delay_days": 21,
+        "historical_failures": 0,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "f434cec5-88a7-493a-afc5-ba511231352c",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "medical",
+      "source": "manual",
+      "language": "ru",
+      "payload": {
+        "patient_id": "PT-2514",
+        "date": "2026-04-09",
+        "diagnosis": "Стресс",
+        "conclusion": "Амбулаторное наблюдение",
+        "doctor": "Dr. Adams"
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          6769,
+          14331,
+          16222,
+          33417,
+          15689,
+          23821,
+          21869,
+          3004,
+          15881,
+          14453
+        ],
+        "counterparty_risk": 0.72,
+        "delay_days": 7,
+        "historical_failures": 3,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "f3cedcbd-ff81-448e-83f5-ae6c28d3d067",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "technical",
+      "source": "manual",
+      "language": "en",
+      "payload": {
+        "spec_id": "SPEC-820",
+        "version": "1.0.0",
+        "release_date": "2025-04-02",
+        "component": "pump",
+        "status": "draft"
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          32556,
+          25544,
+          22212,
+          19141,
+          25569,
+          34589,
+          32540,
+          8462,
+          32768,
+          22986
+        ],
+        "counterparty_risk": 0.69,
+        "delay_days": 23,
+        "historical_failures": 2,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "4654ea4b-d857-435a-8355-10bd64f69016",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "financial",
+      "source": "json",
+      "language": "en",
+      "payload": {
+        "document_number": "INV-1265",
+        "issue_date": "2026-04-10",
+        "due_date": "2026-04-26",
+        "counterparty_name": "Delta Ltd",
+        "counterparty_inn": "7707083890",
+        "subtotal": 43408.11,
+        "tax_amount": 8681.62,
+        "total_amount": 52239.27,
+        "currency": "RUB",
+        "phone": "+79991234567"
+      },
+      "expected_errors": [
+        "arithmetic_mismatch",
+        "invalid_inn"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          18104,
+          34722,
+          24122,
+          18864,
+          34022,
+          34151,
+          32200,
+          13025,
+          25080,
+          13092
+        ],
+        "counterparty_risk": 0.15,
+        "delay_days": 34,
+        "historical_failures": 3,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "5e8c15c7-688c-45b3-8702-5a97307525d7",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "legal",
+      "source": "manual",
+      "language": "ru",
+      "payload": {
+        "contract_number": "CTR-757",
+        "start_date": "2026-04-28",
+        "end_date": "2026-04-10",
+        "party_a": "ООО Альфа",
+        "party_b": "ООО Альфа",
+        "contract_subject": "Сопровождение проекта",
+        "counterparty_inn": "7707083893"
+      },
+      "expected_errors": [
+        "identical_parties"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          17167,
+          6454,
+          11897,
+          2599,
+          16334,
+          31885,
+          26458,
+          5961,
+          33667,
+          33972
+        ],
+        "counterparty_risk": 0.06,
+        "delay_days": 34,
+        "historical_failures": 4,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "605ea1cb-be45-4680-b1a6-c14cc6dc3d2f",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "hr",
+      "source": "ocr_api",
+      "language": "en",
+      "payload": {
+        "full_name": "",
+        "position": "HR Manager",
+        "experience_years": 8,
+        "phone": "12345",
+        "email": "candidate@mail.com",
+        "date": "2025-08-29"
+      },
+      "expected_errors": [
+        "invalid_phone",
+        "missing_full_name"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          13748,
+          9013,
+          8312,
+          11758,
+          17792,
+          14578,
+          18542,
+          25228,
+          19519,
+          28011
+        ],
+        "counterparty_risk": 0.11,
+        "delay_days": 25,
+        "historical_failures": 3,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "5ff22347-9557-48c1-a726-693dbb6b2822",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "medical",
+      "source": "manual",
+      "language": "en",
+      "payload": {
+        "patient_id": "PT-4700",
+        "date": "2026-04-24",
+        "diagnosis": "Стресс",
+        "conclusion": "Амбулаторное наблюдение",
+        "doctor": "Dr. Adams"
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          26718,
+          33195,
+          5677,
+          2619,
+          13231,
+          7418,
+          34758,
+          30436,
+          23710,
+          8249
+        ],
+        "counterparty_risk": 0.68,
+        "delay_days": 2,
+        "historical_failures": 1,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "4217a1b5-ca4e-4399-8d71-98734a5b5002",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "technical",
+      "source": "ocr_api",
+      "language": "en",
+      "payload": {
+        "spec_id": "SPEC-808",
+        "version": "draft",
+        "release_date": "2025-01-12",
+        "component": "controller",
+        "status": "approved"
+      },
+      "expected_errors": [
+        "non_numeric_version"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          4156,
+          13754,
+          22610,
+          3026,
+          15576,
+          11449,
+          28102,
+          7042,
+          21613,
+          12646
+        ],
+        "counterparty_risk": 0.44,
+        "delay_days": 36,
+        "historical_failures": 3,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "01795d01-d480-49f9-ad2a-26f6283e2c38",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "financial",
+      "source": "json",
+      "language": "en",
+      "payload": {
+        "document_number": "INV-2284",
+        "issue_date": "2026-03-10",
+        "due_date": "2026-04-20",
+        "counterparty_name": "АО Гамма",
+        "counterparty_inn": "7707083893",
+        "subtotal": 37377.64,
+        "tax_amount": 7475.53,
+        "total_amount": 45012.32,
+        "currency": "RUB",
+        "phone": "8(999)-123-45-67"
+      },
+      "expected_errors": [
+        "arithmetic_mismatch",
+        "phone_needs_normalization"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          27998,
+          23389,
+          3941,
+          19912,
+          31527,
+          34152,
+          16951,
+          25318,
+          26603,
+          30301
+        ],
+        "counterparty_risk": 0.18,
+        "delay_days": 37,
+        "historical_failures": 3,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "aa3bf61a-964d-4b09-8dd9-56f1376d37c9",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "legal",
+      "source": "ocr_api",
+      "language": "ru",
+      "payload": {
+        "contract_number": "CTR-917",
+        "start_date": "2026-03-11",
+        "end_date": "2026-05-09",
+        "party_a": "ООО Альфа",
+        "party_b": "ООО Бета",
+        "contract_subject": "Оказание услуг",
+        "counterparty_inn": "7707083893"
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          27534,
+          22753,
+          25638,
+          8982,
+          7997,
+          2340,
+          22202,
+          31146,
+          25587,
+          19679
+        ],
+        "counterparty_risk": 0.12,
+        "delay_days": 5,
+        "historical_failures": 1,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "bff1913d-aac6-4bcb-92d5-964d0998619a",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "hr",
+      "source": "ocr_api",
+      "language": "ru",
+      "payload": {
+        "full_name": "",
+        "position": "HR Manager",
+        "experience_years": 13,
+        "phone": "+15551234567",
+        "email": "candidate@mail.com",
+        "date": "2026-03-29"
+      },
+      "expected_errors": [
+        "missing_full_name"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          23261,
+          27246,
+          2808,
+          21126,
+          29119,
+          27414,
+          7550,
+          17908,
+          13113,
+          26951
+        ],
+        "counterparty_risk": 0.17,
+        "delay_days": 17,
+        "historical_failures": 2,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "47ec9fd4-4a74-4d23-bedd-9b0d01740a4d",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "medical",
+      "source": "manual",
+      "language": "ru",
+      "payload": {
+        "patient_id": "PT-2036",
+        "date": "2026-05-03",
+        "diagnosis": "Гипертония",
+        "conclusion": "",
+        "doctor": "Иванова О.В."
+      },
+      "expected_errors": [
+        "missing_conclusion"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          25666,
+          18495,
+          18160,
+          34492,
+          14815,
+          32006,
+          9010,
+          10879,
+          21966,
+          2443
+        ],
+        "counterparty_risk": 0.71,
+        "delay_days": 21,
+        "historical_failures": 4,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "fb581b67-f50c-405e-bad2-5eaec802b44e",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "technical",
+      "source": "json",
+      "language": "en",
+      "payload": {
+        "spec_id": "SPEC-437",
+        "version": "2.3.1",
+        "release_date": "2025-06-05",
+        "component": "controller",
+        "status": "draft"
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          23015,
+          15163,
+          33392,
+          22590,
+          13641,
+          28099,
+          22915,
+          21100,
+          34178,
+          17887
+        ],
+        "counterparty_risk": 0.28,
+        "delay_days": 17,
+        "historical_failures": 3,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "5ec0c55b-7ec5-41cc-8d63-713d6b949094",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "financial",
+      "source": "manual",
+      "language": "ru",
+      "payload": {
+        "document_number": "INV-9939",
+        "issue_date": "2026-04-20",
+        "due_date": "2026-04-22",
+        "counterparty_name": "ООО Альфа",
+        "counterparty_inn": "771596418012",
+        "subtotal": 28846.75,
+        "tax_amount": 5769.35,
+        "total_amount": 34736.58,
+        "currency": "USD",
+        "phone": "+79991234567"
+      },
+      "expected_errors": [
+        "arithmetic_mismatch"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          28813,
+          34722,
+          11121,
+          21846,
+          17861,
+          18559,
+          12101,
+          29730,
+          26706,
+          6847
+        ],
+        "counterparty_risk": 0.36,
+        "delay_days": 38,
+        "historical_failures": 3,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "eeba1ee0-b935-4fe6-865c-17a5e98340a8",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "legal",
+      "source": "json",
+      "language": "en",
+      "payload": {
+        "contract_number": "CTR-528",
+        "start_date": "2025-12-25",
+        "end_date": "2026-05-11",
+        "party_a": "АО Сфера",
+        "party_b": "Sigma Corp",
+        "contract_subject": "Тест",
+        "counterparty_inn": "7707083893"
+      },
+      "expected_errors": [
+        "weak_subject"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          12901,
+          4903,
+          28189,
+          23731,
+          30210,
+          8943,
+          2691,
+          8462,
+          18956,
+          16549
+        ],
+        "counterparty_risk": 0.41,
+        "delay_days": 33,
+        "historical_failures": 4,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "b642cee6-e84e-46b4-bb2a-aade4cbc2062",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "hr",
+      "source": "manual",
+      "language": "en",
+      "payload": {
+        "full_name": "",
+        "position": "QA Engineer",
+        "experience_years": 4,
+        "phone": "12345",
+        "email": "candidate@mail.com",
+        "date": "2025-09-08"
+      },
+      "expected_errors": [
+        "invalid_phone",
+        "missing_full_name"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          7626,
+          9606,
+          11284,
+          24828,
+          22440,
+          24483,
+          31840,
+          15557,
+          33649,
+          24826
+        ],
+        "counterparty_risk": 0.38,
+        "delay_days": 28,
+        "historical_failures": 3,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "18eb4248-724a-40cc-8244-79c125a182c0",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "medical",
+      "source": "ocr_api",
+      "language": "ru",
+      "payload": {
+        "patient_id": "PT-1732",
+        "date": "2026-03-23",
+        "diagnosis": "Стресс",
+        "conclusion": "",
+        "doctor": "Dr. Adams"
+      },
+      "expected_errors": [
+        "missing_conclusion"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          12771,
+          17985,
+          13432,
+          12494,
+          23691,
+          29942,
+          32281,
+          17194,
+          28545,
+          14088
+        ],
+        "counterparty_risk": 0.18,
+        "delay_days": 42,
+        "historical_failures": 3,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "35bebd6a-90de-4182-b047-adcc01e282af",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "technical",
+      "source": "json",
+      "language": "ru",
+      "payload": {
+        "spec_id": "SPEC-728",
+        "version": "1.0.0",
+        "release_date": "99.99.2026",
+        "component": "gateway",
+        "status": "review"
+      },
+      "expected_errors": [
+        "invalid_date"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          15486,
+          20241,
+          6100,
+          8668,
+          14252,
+          25972,
+          23363,
+          14915,
+          31986,
+          9468
+        ],
+        "counterparty_risk": 0.23,
+        "delay_days": 31,
+        "historical_failures": 4,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "82851486-d794-4f60-9436-12e58e42b4a5",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "financial",
+      "source": "ocr_api",
+      "language": "ru",
+      "payload": {
+        "document_number": "INV-2871",
+        "issue_date": "2026-03-30",
+        "due_date": "2026-05-02",
+        "counterparty_name": "Delta Ltd",
+        "counterparty_inn": "771596418012",
+        "subtotal": 31148.46,
+        "tax_amount": 6229.69,
+        "total_amount": 37378.15,
+        "currency": "RUB",
+        "phone": "8(999)-123-45-67"
+      },
+      "expected_errors": [
+        "phone_needs_normalization"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          10778,
+          22524,
+          9724,
+          17635,
+          22013,
+          9664,
+          13996,
+          26464,
+          11264,
+          27458
+        ],
+        "counterparty_risk": 0.34,
+        "delay_days": 8,
+        "historical_failures": 4,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "4411be9a-7b3c-439b-acfa-569bd75012d6",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "legal",
+      "source": "json",
+      "language": "en",
+      "payload": {
+        "contract_number": "CTR-750",
+        "start_date": "2025-12-27",
+        "end_date": "2026-05-02",
+        "party_a": "ООО Альфа",
+        "party_b": "ООО Бета",
+        "contract_subject": "Тест",
+        "counterparty_inn": "1234567890"
+      },
+      "expected_errors": [
+        "weak_subject",
+        "invalid_inn"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          31556,
+          5513,
+          25529,
+          2628,
+          33759,
+          10947,
+          14787,
+          27162,
+          34438,
+          28813
+        ],
+        "counterparty_risk": 0.53,
+        "delay_days": 26,
+        "historical_failures": 3,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "8783a77f-67d5-464b-ae36-389122a8a763",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "hr",
+      "source": "ocr_api",
+      "language": "en",
+      "payload": {
+        "full_name": "",
+        "position": "Analyst",
+        "experience_years": 7,
+        "phone": "12345",
+        "email": "candidate@mail.com",
+        "date": "2025-12-24"
+      },
+      "expected_errors": [
+        "invalid_phone",
+        "missing_full_name"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          13023,
+          31971,
+          34460,
+          9419,
+          9484,
+          19556,
+          26042,
+          4726,
+          30925,
+          16322
+        ],
+        "counterparty_risk": 0.74,
+        "delay_days": 6,
+        "historical_failures": 1,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "0636e49e-71e3-4476-9b9e-e89718a5ed67",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "medical",
+      "source": "json",
+      "language": "ru",
+      "payload": {
+        "patient_id": "PT-1528",
+        "date": "2026-04-15",
+        "diagnosis": "Гипертония",
+        "conclusion": "Рекомендована госпитализация",
+        "doctor": "Dr. Adams"
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          15754,
+          24978,
+          30060,
+          12877,
+          11124,
+          15541,
+          15562,
+          5890,
+          24991,
+          20421
+        ],
+        "counterparty_risk": 0.47,
+        "delay_days": 10,
+        "historical_failures": 2,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "311b03b8-6e7f-4dce-b8a8-eff87355099a",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "technical",
+      "source": "json",
+      "language": "en",
+      "payload": {
+        "spec_id": "SPEC-373",
+        "version": "draft",
+        "release_date": "99.99.2026",
+        "component": "pump",
+        "status": "approved"
+      },
+      "expected_errors": [
+        "non_numeric_version",
+        "invalid_date"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          10315,
+          10696,
+          18362,
+          11584,
+          23108,
+          18223,
+          27736,
+          34077,
+          11317,
+          19610
+        ],
+        "counterparty_risk": 0.49,
+        "delay_days": 24,
+        "historical_failures": 3,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "548f1b3a-9c37-4fa4-9318-153d7e6f9df4",
+      "client_id": "client-b",
+      "project_id": "demo-project",
+      "document_type": "financial",
+      "source": "manual",
+      "language": "ru",
+      "payload": {
+        "document_number": "INV-2525",
+        "issue_date": "2026-03-23",
+        "due_date": "2026-04-27",
+        "counterparty_name": "АО Гамма",
+        "counterparty_inn": "771596418012",
+        "subtotal": 44186.07,
+        "tax_amount": 8837.21,
+        "total_amount": 53023.28,
+        "currency": "USD",
+        "phone": "8(999)-123-45-67"
+      },
+      "expected_errors": [
+        "phone_needs_normalization"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          8104,
+          32044,
+          25476,
+          6150,
+          28064,
+          16275,
+          30157,
+          15883,
+          34421,
+          19598
+        ],
+        "counterparty_risk": 0.28,
+        "delay_days": 18,
+        "historical_failures": 2,
+        "owner_email": "owner@company.local"
+      }
+    },
+    {
+      "sample_id": "7f2972a3-f681-4b97-9460-ddd2c782697c",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "legal",
+      "source": "json",
+      "language": "ru",
+      "payload": {
+        "contract_number": "CTR-907",
+        "start_date": "2026-02-15",
+        "end_date": "2026-05-10",
+        "party_a": "ООО Альфа",
+        "party_b": "ООО Альфа",
+        "contract_subject": "Оказание услуг",
+        "counterparty_inn": "1234567890"
+      },
+      "expected_errors": [
+        "identical_parties",
+        "invalid_inn"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          30920,
+          31918,
+          2044,
+          30036,
+          15259,
+          10645,
+          21783,
+          12418,
+          19958,
+          8117
+        ],
+        "counterparty_risk": 0.51,
+        "delay_days": 16,
+        "historical_failures": 0,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "63439887-733e-45d9-8fa4-e93f97bc794a",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "hr",
+      "source": "json",
+      "language": "en",
+      "payload": {
+        "full_name": "Петрова Анна",
+        "position": "Analyst",
+        "experience_years": 1,
+        "phone": "12345",
+        "email": "bad-email",
+        "date": "2025-05-07"
+      },
+      "expected_errors": [
+        "invalid_phone",
+        "invalid_email_like"
+      ],
+      "metadata": {
+        "historical_amounts": [
+          7976,
+          8237,
+          2071,
+          15986,
+          33248,
+          7107,
+          10696,
+          16823,
+          31167,
+          2608
+        ],
+        "counterparty_risk": 0.06,
+        "delay_days": 21,
+        "historical_failures": 0,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "5e61bd3f-90f1-44b6-b411-ffe0dd3b9c2e",
+      "client_id": "client-c",
+      "project_id": "demo-project",
+      "document_type": "medical",
+      "source": "json",
+      "language": "ru",
+      "payload": {
+        "patient_id": "PT-8826",
+        "date": "2026-05-09",
+        "diagnosis": "ОРВИ",
+        "conclusion": "Рекомендована госпитализация",
+        "doctor": "Dr. Adams"
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          22535,
+          26088,
+          21611,
+          10986,
+          27082,
+          10725,
+          11362,
+          6483,
+          2555,
+          12755
+        ],
+        "counterparty_risk": 0.36,
+        "delay_days": 13,
+        "historical_failures": 1,
+        "owner_email": "audit@company.local"
+      }
+    },
+    {
+      "sample_id": "3d30817d-9f1b-4a16-aed2-305b948f3e4a",
+      "client_id": "client-a",
+      "project_id": "demo-project",
+      "document_type": "technical",
+      "source": "ocr_api",
+      "language": "en",
+      "payload": {
+        "spec_id": "SPEC-553",
+        "version": "1.0.0",
+        "release_date": "2026-02-14",
+        "component": "pump",
+        "status": "approved"
+      },
+      "expected_errors": [],
+      "metadata": {
+        "historical_amounts": [
+          25038,
+          30140,
+          22611,
+          11163,
+          18238,
+          20151,
+          7521,
+          18263,
+          20672,
+          3757
+        ],
+        "counterparty_risk": 0.64,
+        "delay_days": 42,
+        "historical_failures": 2,
+        "owner_email": "owner@company.local"
+      }
+    }
+  ]
+}
