@@ -125,13 +125,6 @@ async def calculate(request: AnalyticsRequest) -> dict[str, Any]:
     return result.model_dump(mode="json")
 
 
-@app.get("/analytics/{document_id}")
-async def get_document_analytics(document_id: str, actor_role: Role = Role.ANALYST) -> dict[str, Any]:
-    _assert_permission(actor_role, "analytics:read")
-    result = analytics_store.get(document_id)
-    if result is None:
-        raise HTTPException(status_code=404, detail="Analytics not found")
-    return result.model_dump(mode="json")
 
 
 @app.get("/analytics/report")
@@ -188,3 +181,12 @@ async def dashboard(elapsed_seconds: float = 3600.0, actor_role: Role = Role.ANA
 async def get_audit(limit: int = 100, actor_role: Role = Role.ADMIN) -> dict[str, Any]:
     _assert_permission(actor_role, "audit:read")
     return {"items": audit_log[-limit:], "count": len(audit_log[-limit:])}
+
+
+@app.get("/analytics/{document_id}")
+async def get_document_analytics(document_id: str, actor_role: Role = Role.ANALYST) -> dict[str, Any]:
+    _assert_permission(actor_role, "analytics:read")
+    result = analytics_store.get(document_id)
+    if result is None:
+        raise HTTPException(status_code=404, detail="Analytics not found")
+    return result.model_dump(mode="json")

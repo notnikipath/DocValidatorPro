@@ -102,7 +102,7 @@ export function DashboardPage() {
       return "refreshing";
     }
     if (status === "failed") {
-      return "fallback";
+      return "Service unavailable";
     }
     return "live";
   }, [status]);
@@ -154,7 +154,7 @@ export function DashboardPage() {
       <header className="hero">
         <div className="hero-copy">
           <p className="eyebrow">DocValidator Pro</p>
-          <h1>Интеллектуальная валидация документов, контроль качества и бизнес-аналитика в одном окне.</h1>
+          <h1>Качество документов</h1>
           <p className="sub">
             Платформа отслеживает ошибки распознавания, подозрительные изменения, риск неуплаты и историю корректировок
             по финансовым, юридическим, кадровым, медицинским и техническим документам.
@@ -182,8 +182,8 @@ export function DashboardPage() {
               Theme
             </button>
           </div>
-          <p className="status-line">Status: {statusLabel}</p>
-          <p className="status-line">Documents: {dashboard.summary?.documents_total || 0}</p>
+          <p className="status-line" role="status" aria-live="polite">Status: {statusLabel}</p>
+          <p className="status-line" role="status" aria-live="polite">Documents: {dashboard.summary?.documents_total || 0}</p>
         </div>
       </header>
 
@@ -214,7 +214,7 @@ export function DashboardPage() {
         />
       </section>
 
-      {error ? <div className="error-banner">{error}</div> : null}
+      {error ? <div className="error-banner" role="alert">{error}</div> : null}
 
       <section className="content-grid">
         <article className="panel panel-featured">

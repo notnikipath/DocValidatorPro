@@ -46,7 +46,7 @@ DocValidator Pro is a microservice platform for automated document verification,
 ## Quick start
 
 ```bash
-cd 'your/project/folder'
+cd DocValidatorPro
 docker compose up --build -d
 ```
 
